@@ -16,7 +16,7 @@
 	- CacheName (cache dosya adi)
 ]]
 
-local BASE = "https://raw.githubusercontent.com/YOUR_USER/YOUR_REPO/main"
+local BASE = "https://raw.githubusercontent.com/realdausita/Rise-Music/main"
 
 return {
 	Catalog = {
