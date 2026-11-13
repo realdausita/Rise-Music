@@ -1,48 +1,36 @@
-Rise Evade - Music catalog (kendi repo'nuza yukleyin)
-=================================================
+Rise Evade - Music catalog
+==========================
 
-    MusicRepo/
-      catalog.lua                 <- tek kaynak (BASE satirini kendi raw adresinizle degistirin)
-      music/part1/ part2/ part3/  <- 260 mp3 (944 MB) 3 parcaya bolundu
-      covers/part1/ part2/         <- 218 kapak gorseli (22 MB)
+Bu repo Rise Evade script'inin müzik listesini ve dosyalarini barindirir.
+Artik Yin Yang reposuna hicbir bagimlilik yoktur.
 
-GitHub'a yukleme (WEB ARAYUZUNDE 100 DOSYADAN FAZLASI OLMAZ)
------------------------------------------------------------
-Bu klasor git repo olarak hazirlandi (branch: main, 1 commit).
-Sadece su iki komutu calistir:
+    catalog.lua                 -> tek kaynak (260 sarki)
+    music/part1/ part2/ part3/  -> 260 mp3 (944 MB)
+    covers/part1/ part2/        -> 218 kapak gorseli (asset olmayanlar, 22 MB)
 
-    cd "C:\Users\delik\Downloads\Rise Evade\MusicRepo"
-    git remote add origin https://github.com/<SENIN-KULLANICI>/<REPO>.git
-    git push -u origin main
+Katalogda BASE satiri zaten kendi adresimize ayarli:
+    local BASE = "https://raw.githubusercontent.com/realdausita/Rise-Music/main"
 
-Git Credential Manager acilip tarayicida GitHub'a giris yapman isteyecektir.
-(Tek seferlik PAT da kullanabilirsin: https://github.com/settings/tokens)
+Script tarafinda:
+    Music.CatalogURL = "https://raw.githubusercontent.com/realdausita/Rise-Music/main/catalog.lua"
+    (Rise Evade/music_player.luzu)
 
-Not: toplam ~950 MB. GitHub "1 GB altinda olsun" diye onerir ama tek dosya
-siniri 100 MB (en buyuk mp3 15 MB) sorun degil, web arayuzu dosya sayisi
-sinirindan dolayi reddediyor. git push ile tek seferde gider.
-
-Web arayuzu kullanmak istersen: part1/part2/part3 klasorlerini tek tek, her
-seferde en fazla 20-25 dosya secerek yukle.
-
-Repo'ya girdikten sonra iki yeri guncelle
----------------------------------------
-1) catalog.lua:
-       local BASE = "https://raw.githubusercontent.com/<SENIN-KULLANICI>/<REPO>/main"
-   (dosyayi repoda degistirip tekrar commit + push et)
-
-2) Rise Evade tarafinda (music_player.luau):
-       Music.CatalogURL = "https://raw.githubusercontent.com/<SENIN-KULLANICI>/<REPO>/main/catalog.lua"
+Guncelleme yapmak icin:
+    git add -A
+    git commit -m "guncelleme"
+    git push origin main
 
 Katalog formati
 ---------------
     Name, Artist, Duration ("mm:ss"),
     Cover = "rbxassetid://..."                (varsa dogrudan gosterilir)
-    CoverURL = BASE.."/covers/partN/xxx"     (asset yoksa indirilir + RiseEvade/music/ icine cache'lenir)
+    CoverURL = BASE.."/covers/partN/xxx"     (asset yoksa indirilir + cache'lenir)
     AudioURL = BASE.."/music/partN/xxx.mp3"   (zorunlu)
     CacheName = "xxx.mp3"                    (cache dosya adi)
 
-Gereksinimler
--------------
+Notlar
+------
 * AudioURL verilmeyen kayitlar listede gosterilmez.
-* Ses dosyalari once indirilip executor'in RiseEvade/music/ klasorune cache'lenir.
+* Oyuncu ses dosyalarini ilk calismada indirip executor'in RiseEvade/music/ klasorune cache'ler.
+* GitHub web arayuzu tek seferde 100 dosyadan fazlasini kabul etmiyor; bu yuzden
+  mp3'ler 3 parcaya bolundu (87/87/86).
