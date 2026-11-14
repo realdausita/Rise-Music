@@ -781,15 +781,6 @@ return {
 			CacheName = "cantalala_slowed.mp3",
 		},
 		{
-			Name = "CEKICBASLIKOPEKBALIGI",
-			Artist = "Deha Inc.",
-			Duration = "11:50",
-			Cover = "",
-			CoverURL = BASE .. "/covers/part3/deha_inc_cekicbaslikopekbaligi_cover.jpg",
-			AudioURL = BASE .. "/music/part4/deha_inc_cekicbaslikopekbaligi.mp3",
-			CacheName = "deha_inc_cekicbaslikopekbaligi.mp3",
-		},
-		{
 			Name = "• Chérie • 23 • (Sloweddd)",
 			Artist = "VDYCD",
 			Duration = "03:44",
@@ -2955,15 +2946,6 @@ return {
 			Cover = "rbxassetid://108323126145343",
 			AudioURL = BASE .. "/music/part3/starly_slowed.mp3",
 			CacheName = "starly_slowed.mp3",
-		},
-		{
-			Name = "STARTUP$",
-			Artist = "Deha Inc.",
-			Duration = "30:12",
-			Cover = "",
-			CoverURL = BASE .. "/covers/part3/deha_inc_startup_cover.jpg",
-			AudioURL = BASE .. "/music/part4/deha_inc_startup.mp3",
-			CacheName = "deha_inc_startup.mp3",
 		},
 		{
 			Name = "Stay With Me",
