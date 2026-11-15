@@ -1799,6 +1799,15 @@ return {
 			CacheName = "swirf_hergecenasiloldugumu.mp3",
 		},
 		{
+			Name = "Hermès 2.0",
+			Artist = "Batuflex",
+			Duration = "1:21",
+			Cover = "",
+			CoverURL = BASE .. "/covers/part8/hermes_2_0_cover.jpg",
+			AudioURL = BASE .. "/music/part8/hermes_2_0.mp3",
+			CacheName = "hermes_2_0.mp3",
+		},
+		{
 			Name = "HİÇ DERS ALMAM",
 			Artist = "Swirf",
 			Duration = "2:07",
