@@ -1,20 +1,3 @@
---[[
-	Rise Evade - Music catalog
-	==========================
-
-	Kendi GitHub repo'nuzdan beslenir. BASE satiri asagida ayarli.
-
-	Klasor yapisi:
-	  music/part1..partN   -> mp3 dosyalari
-	  covers/part1..partN  -> kapak gorselleri
-
-	Her kayit icin gerekenler:
-	- Name, Artist, Duration ("mm:ss")
-	- Cover (rbxassetid:// ile) veya CoverURL (ham adres)
-	- AudioURL (mp3 ham adresi)   <-- zorunlu
-	- CacheName (cache dosya adi)
-]]
-
 local BASE = "https://raw.githubusercontent.com/realdausita/Rise-Music/main"
 
 return {
